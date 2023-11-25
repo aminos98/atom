@@ -13,21 +13,21 @@ import net.thevpc.gaming.atom.model.Sprite;
  * Created by vpc on 9/23/16.
  */
 @AtomSprite(
-        name = "Ball1",
+        name = "Ball2",
         kind = "Ball",
         sceneEngine = "hello",
-        x=2,
-        y=2,
+        x=4,
+        y=8,
         direction = Math.PI/4,
-        speed = 0.2,
-        width = 1,
-        height = 1,
+        speed = 0.4,
+        width = 2,
+        height = 2,
         mainTask = MoveSpriteMainTask.class,
         //collisionTask = StopSpriteCollisionTask.class
         collisionTask = BounceSpriteCollisionTask.class
 
 )
-public class Ball {
+public class Ball2 {
     @Inject
     Sprite sprite;
     @Inject
@@ -35,6 +35,6 @@ public class Ball {
 
     @OnInit
     private void init(){
-        sprite.setLocation(2,2);
+        //sprite.setLocation(8,2);
     }
 }

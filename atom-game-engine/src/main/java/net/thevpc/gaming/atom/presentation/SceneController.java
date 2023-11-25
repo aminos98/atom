@@ -52,18 +52,22 @@ public interface SceneController {
 
 
     /**
-     * Invoked when a key has been released. See the class description for
-     * {@link SceneKeyEvent} for a definition of a key released event.
-     */
-    default void keyReleased(SceneKeyEvent e){
-
-    }
-
-    /**
      * Invoked when the mouse button has been clicked (pressed and released) on
      * a component.
      */
     default void mouseClicked(SceneMouseEvent e){
+
+    }
+
+    default void mouseClickedOrientation(SceneMouseEvent e){
+
+    }
+
+    /**
+     * Invoked when a key has been released. See the class description for
+     * {@link SceneKeyEvent} for a definition of a key released event.
+     */
+    default void keyReleased(SceneKeyEvent e){
 
     }
 

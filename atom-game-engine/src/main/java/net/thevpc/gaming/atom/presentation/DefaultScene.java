@@ -1633,6 +1633,7 @@ public class DefaultScene implements Scene {
                     for (SceneController listener : listeners) {
                         if (listener.acceptEvent(SceneController.MOUSE_CLICKED)) {
                             listener.mouseClicked(e);
+                            listener.mouseClickedOrientation(e);
                             if (e.isDisabled()) {
                                 break;
                             }

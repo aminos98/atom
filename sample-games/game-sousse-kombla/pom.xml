@@ -17,6 +17,12 @@
             <artifactId>atom-game-engine</artifactId>
             <version>1.5.4.2</version>
         </dependency>
+        <dependency>
+            <groupId>net.thevpc.gaming.atom.examples</groupId>
+            <artifactId>game-sousse-pong</artifactId>
+            <version>1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <repositories>
         <repository>

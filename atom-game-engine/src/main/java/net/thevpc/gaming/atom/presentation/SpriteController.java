@@ -1,6 +1,7 @@
 package net.thevpc.gaming.atom.presentation;
 
 import net.thevpc.gaming.atom.engine.SpriteFilter;
+import net.thevpc.gaming.atom.engine.maintasks.MoveToPointSpriteMainTask;
 import net.thevpc.gaming.atom.model.Orientation;
 import net.thevpc.gaming.atom.model.Sprite;
 
@@ -91,6 +92,15 @@ public class SpriteController extends DefaultSceneController {
         setLeft(KeyCode.J);
         setRight(KeyCode.L);
         return this;
+    }
+    public void mouseClickedOrientation(Sprite sprite, SceneMouseEvent e) {
+        MoveToPointSpriteMainTask moveToPointSpriteMainTask = new MoveToPointSpriteMainTask(e.getPoint());
+        moveToPointSpriteMainTask.nextFrame(sprite.getSceneEngine(),sprite );
+    }
+    public void mouseClickedOrientation(SceneMouseEvent e) {
+        for (Sprite sp : e.getScene().getSceneEngine().findSprites(SpriteFilter.byName("Ball2"))) {
+            mouseClickedOrientation(sp, e);
+        }
     }
 
     public KeyCodeSet getLeft() {
